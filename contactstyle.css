@@ -1,0 +1,83 @@
+
+/*  */
+@media only screen and (max-width: 700px){
+    body, html {
+        height: 100%;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+    .bg-image {
+        background-image: url("images/contact_coffeeshop.png");
+        filter: blur(3px);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #formcontainer{
+        color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 10px;
+        transform:translate(-50%,-50%);
+        width: 80%;
+        height: 80%;
+        box-sizing: border-box;
+        background-color: rgba(255,255,255, 0.6);
+        font-size: 30px;
+        align-items: center;
+        display: flex;
+        border-radius: 7px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    .name{
+        width: 99%;
+        position: relative;
+        height: 50px;
+        box-sizing: border-box;
+        left: 50%;
+        transform: translate(-50%);
+        border: solid 2px black;
+        border-radius: 10px;
+    }
+
+    #feedback{
+        width: 98%;
+        position: relative;
+        height: 10em;
+        box-sizing: border-box;
+        left: 50%;
+        transform: translate(-50%);
+        border: solid 2px black;
+        border-radius: 10px;
+    }
+
+    #submit {
+        background-color: black;
+        border-radius: 5px;
+        height: 2.5em;
+        width: 50%;
+        color: aliceblue;
+        font-size: 30px;
+        margin: 0;
+        position: absolute;
+        box-sizing: border-box;
+        top: 85%;
+        left: 25%;
+        transform: translateY(-50%);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    
+    #logo{
+        position: absolute;
+        top: -25px;
+        height: 10%;
+        height: 30%;
+        left: 20%;
+    }
+
+}
