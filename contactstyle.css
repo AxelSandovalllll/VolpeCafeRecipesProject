@@ -1,24 +1,80 @@
 /*  */
+body,
+html {
+    height: 100%;
+    background-color: #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+hr {
+    width: 70%;
+}
+
+.bg-image {
+    background-image: url("images/coffeefriends.jpeg");
+    filter: blur(4px);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.footer {
+    width: 100%;
+    height: 20%;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 97%;
+    text-align: center;
+    padding-top: 1.5em;
+    line-height: 0.5;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.contact {
+    color: white;
+    font-size: 15px;
+}
+
 @media only screen and (max-width: 700px) {
-
-    body,
-    html {
-        height: 100%;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-
-    .bg-image {
-        background-image: url("images/contact_coffeeshop.png");
-        filter: blur(3px);
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 
     #formcontainer {
         color: black;
@@ -28,12 +84,11 @@
         padding: 10px;
         transform: translate(-50%, -50%);
         width: 80%;
-        height: 80%;
+        height: 75%;
         box-sizing: border-box;
         background-color: rgba(255, 255, 255, 0.6);
         font-size: 30px;
         align-items: center;
-        display: flex;
         border-radius: 7px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     }
@@ -41,7 +96,7 @@
     .name {
         width: 99%;
         position: relative;
-        height: 50px;
+        height: 3.5em;
         box-sizing: border-box;
         left: 50%;
         transform: translate(-50%);
@@ -57,30 +112,139 @@
         left: 50%;
         transform: translate(-50%);
         border: solid 2px black;
-        border-radius: 10px;
+        border-radius: .5em;
     }
 
     #submit {
         background-color: black;
         border-radius: 5px;
-        height: 2.5em;
+        height: 10%;
         width: 50%;
         color: aliceblue;
         font-size: 30px;
         margin: 0;
         position: absolute;
         box-sizing: border-box;
-        top: 85%;
+        top: 93%;
         left: 25%;
         transform: translateY(-50%);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     }
 
     #logo {
-        position: absolute;
+        position: relative;
         top: -25px;
-        height: 10%;
         height: 30%;
-        left: 20%;
+        left: 50%;
+        transform: translate(-50%);
+        margin-bottom: -2em;
+    }
+
+    #submit:hover {
+        background-color: #43281c;
+        border: black solid 3px;
+        height: 11%;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+
+    #formcontainer {
+        color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 10px;
+        transform: translate(-50%, -50%);
+        width: 690px;
+        height: 690px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.6);
+        font-size: 30px;
+        align-items: center;
+        border-radius: 7px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(5, 20%);
+        gap: 0;
+        grid-auto-flow: row dense;
+    }
+
+    form {
+        grid-row: 1 / 6;
+        grid-column: 2 / 3;
+        margin: .5em;
+    }
+
+    .name {
+        width: 99%;
+        position: relative;
+        height: 3.5em;
+        box-sizing: border-box;
+        left: 50%;
+        transform: translate(-50%);
+        border: solid 2px black;
+        border-radius: 10px;
+    }
+
+    #feedback {
+        width: 98%;
+        position: relative;
+        height: 10em;
+        box-sizing: border-box;
+        left: 50%;
+        transform: translate(-50%);
+        border: solid 2px black;
+        border-radius: .5em;
+    }
+
+    #submit {
+        background-color: black;
+        border-radius: 5px;
+        height: 70%;
+        width: 80%;
+        color: aliceblue;
+        font-size: 30px;
+        margin: 0;
+        position: absolute;
+        box-sizing: border-box;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+    }
+
+    #logo {
+        position: relative;
+        top: -25px;
+        height: 130%;
+        left: 50%;
+        transform: translate(-50%);
+        margin-bottom: -2em;
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+
+    #submit:hover {
+        background-color: #43281c;
+        border: black solid 3px;
+        height: 78%;
+    }
+
+    #sideimage {
+        grid-row: 1 / 6;
+        grid-column: 1 / 2;
+        background-image: url("images/coffee-2.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        height: 100%;
+        width: 100%;
+        border: solid 1px #43281c;
+
     }
 }
