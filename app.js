@@ -1,4 +1,17 @@
+
 // api accessing format
-fetch('https://api.spoonacular.com/food/search?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query=apple')
+fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=61bba8c3712641a384c5d6d4e1665cc2&number=12&query=pasta')
     .then((beans) => beans.json())
-    .then((data) => console.log(data));
+    .then((beans) => {
+        console.log(beans); 
+        var recipes;
+        beans['results'].forEach(element => {
+            console.log(element['title']);
+            recipe += (`<img src=${element['image']}></img><h1>${element['title']}</h1>`
+            );
+        });
+        document.getElementById('recipe-grid').innerHTML = recipe;
+    });
+
+
+
