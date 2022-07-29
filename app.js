@@ -1,6 +1,6 @@
 
 // api accessing format
-fetch('https://api.spoonacular.com/recipes/716429/information?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&includeNutrition=false')
+/*fetch('https://api.spoonacular.com/recipes/716429/information?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&includeNutrition=false')
     .then((beans) => beans.json())
     .then((beans) => {
         recipes = (`
@@ -14,7 +14,7 @@ fetch('https://api.spoonacular.com/recipes/716429/information?apiKey=d14b4e290b0
         </div> `
         );
         document.getElementById('recipe-grid').innerHTML = recipes;
-    })
+    })*/
 
     /*fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=12&query=pasta')
     .then((beans) => beans.json())
@@ -46,3 +46,19 @@ fetch('https://api.spoonacular.com/recipes/716429/information?apiKey=d14b4e290b0
         }); 
    }*/
 
+   const mainMenu = document.querySelector('.mainMenu');
+   const closeMenu = document.querySelector('.closeMenu');
+   const openMenu = document.querySelector('.openMenu');
+   
+   
+   openMenu.addEventListener('click', show);
+   closeMenu.addEventListener('click', close);
+   
+   function show() {
+       mainMenu.style.display = 'flex';
+       mainMenu.style.top = '0';
+   }
+   
+   function close() {
+       mainMenu.style.top = '-100%';
+   }
