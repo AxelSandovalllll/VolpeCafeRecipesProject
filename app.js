@@ -1,50 +1,36 @@
 
-// api accessing format
-/*fetch('https://api.spoonacular.com/recipes/716429/information?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&includeNutrition=false')
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=61bba8c3712641a384c5d6d4e1665cc2&number=10&query=coffee&addRecipeInformation=true')
     .then((beans) => beans.json())
     .then((beans) => {
-        recipes = (`
-        <div class=card>
-            <div class=thumb>
-                <img class=thumb-img src=${beans['image']}></img>
-            </div>
-            <h1 class=recipename >${beans['title']}</h1>
-            <p class=serving > Servings: ${beans['servings']} </p>
-            <p class=minutes > Ready: ${beans['readyInMinutes']} </p>
-        </div> `
-        );
-        document.getElementById('recipe-grid').innerHTML = recipes;
-    })*/
-
-    /*fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=12&query=pasta')
-    .then((beans) => beans.json())
-    .then((beans) => {
-        var recipes = "";
+        console.log(beans);
+        var loader = document.getElementById('loader');
+        loader.style.display = 'none';
         beans['results'].forEach(element => {
-            var id = element['id'];
-            var item = getRecipeInformation(id);
-            item.then(reponse =>{
-               var recipe = (`
-                          <div class=htmlSegment'>
-                              <img src=${item['image']}></img>
-                              <h1>${item['title']}</h1>
-                              <h6> ${item['servings']} </h6>
-                              <h6> ${item['readyInMinutes']} </h6>
-                          </div> `)
-                document.getElementById('recipe-grid').innerHTML = recipe;
-            }); 
+            var item = (`
+                <div class=card>
+                    <div class=tumb>
+                        <img src=${element['image']}></img>
+                    </div>
+                    <div class=details>
+                        <h4>${element['title']}</h4>
+                        <div class=recipe-details>
+                            <p> Servings: ${element['servings']}  </p>
+                            <p> Time: ${element['readyInMinutes']} Minutes </p>
+                            <div class=rating>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>      
+                </div> `)
+            document.getElementById('recipe-grid').innerHTML += item;  
         });
         
     })
     
-    
-  function getRecipeInformation(id){
-        return fetch('https://api.spoonacular.com/recipes/'+id+'/information?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&includeNutrition=false')
-        .then((data) => data.json())
-        .then((recipe) => {
-            return recipe;           
-        }); 
-   }*/
 
    const mainMenu = document.querySelector('.mainMenu');
    const closeMenu = document.querySelector('.closeMenu');
@@ -62,3 +48,25 @@
    function close() {
        mainMenu.style.top = '-100%';
    }
+
+const ratingStars = [...document.getElementsByClassName("rating__star")];
+
+function executeRating(stars) {
+  const starClassActive = "rating__star fas fa-star";
+  const starClassInactive = "rating__star far fa-star";
+  const starsLength = stars.length;
+  let i;
+  stars.map((star) => {
+    star.onclick = () => {
+      i = stars.indexOf(star);
+
+      if (star.className.indexOf(starClassInactive) !== -1) {
+        for (i; i >= 0; --i) stars[i].className = starClassActive;
+      } else {
+        for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+      }
+    };
+  });
+}
+
+executeRating(ratingStars);
