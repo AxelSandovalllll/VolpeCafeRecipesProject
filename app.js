@@ -28,8 +28,7 @@
                 </div> `)
             document.getElementById('recipe-grid').innerHTML += item;  
         });
-        
-    })
+    });
     
 
    const mainMenu = document.querySelector('.mainMenu');
