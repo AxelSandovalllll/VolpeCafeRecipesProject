@@ -1,5 +1,5 @@
 
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=61bba8c3712641a384c5d6d4e1665cc2&number=8&query=coffee&addRecipeInformation=true')
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=61bba8c3712641a384c5d6d4e1665cc2&number=14&query=coffee&addRecipeInformation=true')
     .then((beans) => beans.json())
     .then((beans) => {
         console.log(beans);

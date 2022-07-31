@@ -5,7 +5,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px,300px));
     grid-gap: 0.85em;
-    width: 80%;
     left: 60%;
     transform: translate(-50%);
 }
@@ -76,14 +75,11 @@
 #loader {
     border: 16px solid white;
     border-radius: 50%;
-    border-top: 16px solid brown;
-    width: 120px;
-    height: 120px;
+    border-top: 16px solid black;
+    width: 90px;
+    height: 90px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
-    top: 30%;
-    left: 30%;
-    transform: translate(-50%,-50%);
     position: absolute;
   }
   
@@ -96,4 +92,24 @@
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  .recipe-links{
+    position: absolute;
+    width: 20%;
+    top: 7.5rem;
+    background-color: white;
+    color: black;
+    text-align: left;
+    padding: 10px;
+    height: 80%;
+    line-height: 1.25;
+  }
+
+  .recipe-links ul,li{
+    list-style-type: none;
+    list-style-position: inside;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
   }
