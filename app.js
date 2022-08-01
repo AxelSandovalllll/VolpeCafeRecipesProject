@@ -1,5 +1,6 @@
 
     fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query=coffee&addRecipeInformation=true')
+
     .then((beans) => beans.json())
     .then((beans) => {
         console.log(beans);
@@ -26,10 +27,9 @@
                         </div>
                     </div>      
                 </div> `)
-            document.getElementById('recipe-grid').innerHTML += item;  
+            document.getElementById('recipe-grid').innerHTML += item;
         });
     });
-    
 const mainMenu = document.querySelector('.mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
@@ -50,21 +50,21 @@ function close() {
 const ratingStars = [...document.getElementsByClassName("rating__star")];
 
 function executeRating(stars) {
-  const starClassActive = "rating__star fas fa-star";
-  const starClassInactive = "rating__star far fa-star";
-  const starsLength = stars.length;
-  let i;
-  stars.map((star) => {
-    star.onclick = () => {
-      i = stars.indexOf(star);
+    const starClassActive = "rating__star fas fa-star";
+    const starClassInactive = "rating__star far fa-star";
+    const starsLength = stars.length;
+    let i;
+    stars.map((star) => {
+        star.onclick = () => {
+            i = stars.indexOf(star);
 
-      if (star.className.indexOf(starClassInactive) !== -1) {
-        for (i; i >= 0; --i) stars[i].className = starClassActive;
-      } else {
-        for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
-      }
-    };
-  });
+            if (star.className.indexOf(starClassInactive) !== -1) {
+                for (i; i >= 0; --i) stars[i].className = starClassActive;
+            } else {
+                for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+            }
+        };
+    });
 }
 
 executeRating(ratingStars);
