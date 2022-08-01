@@ -1,5 +1,5 @@
 
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=5&query=coffee&addRecipeInformation=true')
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query=coffee&addRecipeInformation=true')
     .then((beans) => beans.json())
     .then((beans) => {
         console.log(beans);
@@ -48,6 +48,7 @@ function close() {
 }
 
 const ratingStars = [...document.getElementsByClassName("rating__star")];
+
 function executeRating(stars) {
   const starClassActive = "rating__star fas fa-star";
   const starClassInactive = "rating__star far fa-star";
