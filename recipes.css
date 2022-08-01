@@ -95,9 +95,11 @@
     position:relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px,300px));
-    grid-gap: 0.85em;
-    left: 68%;
+    column-gap: 5%;
+    row-gap: 5%;
+    left: 60%;
     transform: translate(-50%);
+    width: 85%;
     }
 
     .recipe-links{

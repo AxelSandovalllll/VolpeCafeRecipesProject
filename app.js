@@ -1,5 +1,5 @@
 
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=61bba8c3712641a384c5d6d4e1665cc2&number=1&query=coffee&addRecipeInformation=true')
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=5&query=coffee&addRecipeInformation=true')
     .then((beans) => beans.json())
     .then((beans) => {
         console.log(beans);
@@ -69,3 +69,40 @@ function executeRating(stars) {
 }
 
 executeRating(ratingStars);
+
+
+function getRecipesBy(query){
+    var loader = document.getElementById('loader');
+    document.getElementById('recipe-grid').innerHTML = '';
+    loader.style.display = '';
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query='+query+'&addRecipeInformation=true')
+    .then((beans) => beans.json())
+    .then((beans) => {
+        console.log(beans);
+        var loader = document.getElementById('loader');
+        loader.style.display = 'none';
+        beans['results'].forEach(element => {
+            var item = (`
+                <div class=card>
+                    <div class=tumb>
+                        <img src=${element['image']}></img>
+                    </div>
+                    <div class=details>
+                        <h4>${element['title']}</h4>
+                        <div class=recipe-details>
+                            <p> Servings: ${element['servings']}  </p>
+                            <p> Time: ${element['readyInMinutes']} Minutes </p>
+                            <div class=rating>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>      
+                </div> `)
+            document.getElementById('recipe-grid').innerHTML += item;  
+        });
+    });
+}
