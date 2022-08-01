@@ -37,19 +37,19 @@
             <div class="recipe-links">
                 <h2> Explore: </h2>
                 <ul>
-                    <li class="list-action" onclick=""> Desserts </li>
-                    <li class="list-action" onclick=""> Lattes </li>
-                    <li class="list-action" onclick=""> Refreshers </li> 
+                    <li class="list-action" onclick="getRecipesBy('pasta')"> Desserts </li>
+                    <li class="list-action" onclick="getRecipesBy('latte')"> Lattes </li>
+                    <li class="list-action" onclick="getRecipesBy('mocha')"> Refreshers </li> 
                 </ul>
                 
             </div>
 
             <div class="dropdown-menu">
                 <select name="Explore">
-                    <option value="Populer" onclick=""> Popular </option>
-                    <option value="Desserts" onclick=""> Desserts </option>
-                    <option value="Lattes" onclick=""> Lattes </option>
-                    <option value="Refreshers" onclick=""> Refreshers </option> 
+                    <option value="Populer" onclick="getRecipesBy('coffee')"> Popular </option>
+                    <option value="Desserts" onclick="getRecipesBy('pasta')"> Desserts </option>
+                    <option value="Lattes" onclick="getRecipesBy('latte')"> Lattes </option>
+                    <option value="Refreshers" onclick="getRecipesBy('mocha')"> Refreshers </option> 
                 </select>
             </div>
             
