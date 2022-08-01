@@ -1,6 +1,6 @@
-
 /*  */
-body, html {
+body,
+html {
     height: 100%;
     background-color: #000;
     font-family: 'Bookman, URW Bookman L, serif';
@@ -12,7 +12,7 @@ body, html {
     padding: 0;
 }
 
-hr{
+hr {
     width: 100%;
 }
 
@@ -27,20 +27,20 @@ hr{
     background-position: center;
 }
 
-.footer{
+.footer {
     height: 25%;
     background-color: #000;
     position: absolute;
     left: 0;
     width: 100%;
     top: 97%;
-    text-align:center;
+    text-align: center;
     padding-top: 1.5em;
     line-height: 1.5;
     border: black solid 5px;
 }
 
-.fab{
+.fab {
     margin-top: 5%;
     text-align: center;
     text-decoration: none;
@@ -48,32 +48,33 @@ hr{
     display: inline-block;
     font-size: 35px;
     color: white;
-  }
- 
-  .fa-facebook:hover {
+}
+
+.fa-facebook:hover {
     color: rgb(70, 120, 219);
-  }
- 
-  .fa-twitter:hover {
+}
+
+.fa-twitter:hover {
     color: #55ACEE;
-  }
+}
 
-  .fa-instagram:hover {
+.fa-instagram:hover {
     color: palevioletred;
-  }
+}
 
-  .fa-snapchat-ghost:hover {
+.fa-snapchat-ghost:hover {
     color: #fffc00;
-  }
+}
 
-  .fa-tiktok:hover{
+.fa-tiktok:hover {
     background: #000;
     text-shadow: 2px 3px #fe2d52, -1px -3px #55acee;
-  }
-  .contact{
+}
+
+.contact {
     color: white;
     font-size: 15px;
-  }
+}
 
 /*  */
 nav {
@@ -142,28 +143,28 @@ nav .logo img {
     margin-bottom: 25px;
 }
 
-@media only screen and (max-width: 700px){
-    
-    #formcontainer{
+@media only screen and (max-width: 700px) {
+
+    #formcontainer {
         color: black;
         position: absolute;
         top: 50%;
         left: 50%;
         padding: 10px;
-        transform:translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 80%;
         height: 75%;
         box-sizing: border-box;
-        background-color: rgba(255,255,255, 0.6);
+        background-color: rgba(255, 255, 255, 0.6);
         font-size: 30px;
         align-items: center;
         border-radius: 7px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
-    .name{
+    .name {
         width: 99%;
-        position:relative;
+        position: relative;
         height: 3.5em;
         box-sizing: border-box;
         left: 50%;
@@ -172,7 +173,7 @@ nav .logo img {
         border-radius: 10px;
     }
 
-    #feedback{
+    #feedback {
         width: 98%;
         position: relative;
         height: 10em;
@@ -198,8 +199,8 @@ nav .logo img {
         transform: translateY(-50%);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     }
-    
-    #logo{
+
+    #logo {
         position: relative;
         top: -25px;
         height: 30%;
@@ -208,10 +209,10 @@ nav .logo img {
         margin-bottom: -2em;
     }
 
-    #submit:hover{
+    #submit:hover {
         background-color: #43281c;
         border: black solid 3px;
-        height: 11%; 
+        height: 11%;
     }
 
     nav .mainMenu {
@@ -259,42 +260,42 @@ nav .logo img {
         width: auto;
         margin-bottom: 25px;
     }
-    
+
 }
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 700px) {
 
-    #formcontainer{
+    #formcontainer {
         color: black;
         position: absolute;
         top: 50%;
         left: 50%;
         padding: 10px;
-        transform:translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 80%;
         height: 83%;
         box-sizing: border-box;
-        background-color: rgba(255,255,255, 0.6);
+        background-color: rgba(255, 255, 255, 0.6);
         font-size: 30px;
         align-items: center;
         border-radius: 7px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(5,20%);
+        grid-template-rows: repeat(5, 20%);
         gap: 0;
         grid-auto-flow: row dense;
     }
 
-    form{
+    form {
         grid-row: 1 / 6;
         grid-column: 2 / 3;
         margin: .5em;
     }
 
-    .name{
+    .name {
         width: 99%;
-        position:relative;
+        position: relative;
         height: 3.5em;
         box-sizing: border-box;
         left: 50%;
@@ -303,7 +304,7 @@ nav .logo img {
         border-radius: 10px;
     }
 
-    #feedback{
+    #feedback {
         width: 98%;
         position: relative;
         height: 10em;
@@ -331,8 +332,8 @@ nav .logo img {
         grid-row: 5 / 6;
         grid-column: 2 / 3;
     }
-    
-    #logo{
+
+    #logo {
         position: relative;
         top: -25px;
         height: 130%;
@@ -343,13 +344,13 @@ nav .logo img {
         grid-column: 2 / 3;
     }
 
-    #submit:hover{
+    #submit:hover {
         background-color: #43281c;
         border: black solid 3px;
-        height: 78%; 
+        height: 78%;
     }
-    
-    #sideimage{
+
+    #sideimage {
         grid-row: 1 / 6;
         grid-column: 1 / 2;
         background-image: url("./images/coffee-2.jpeg");
@@ -361,4 +362,4 @@ nav .logo img {
         border: solid 1px #43281c;
 
     }
-    }
+}

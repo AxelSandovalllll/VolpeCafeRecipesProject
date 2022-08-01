@@ -1,14 +1,13 @@
-
 body {
     font-family: 'Bookman, URW Bookman L, serif';
 }
 
-.content{
+.content {
     position: relative;
     min-height: 100vh;
 }
 
-.content-wrap{
+.content-wrap {
     position: relative;
     padding-bottom: 15rem;
 }
@@ -72,8 +71,8 @@ nav .logo img {
     position: absolute;
     display: flex;
     left: -20px;
-    top: -45px;
-    height: 250px;
+    top: -30px;
+    height: 160px;
     width: auto;
     margin-bottom: 25px;
 }
@@ -84,14 +83,14 @@ h1 {
     font-family: 'Bookman, URW Bookman L, serif';
 }
 
-.footer{
+.footer {
     height: 12rem;
     background-color: #000;
     position: absolute;
     left: 0;
     width: 100%;
     top: 97%;
-    text-align:center;
+    text-align: center;
     padding-top: 1.5em;
     line-height: 1.5;
     border: black solid 5px;
@@ -100,38 +99,39 @@ h1 {
     z-index: 1;
 }
 
-.fab{
+.fab {
     margin-top: 5%;
     text-align: center;
     text-decoration: none;
     margin: 0.5em;
     display: inline-block;
     font-size: 35px;
-  }
+}
 
 .fa-facebook:hover {
     color: rgb(70, 120, 219);
-  }
- 
-  .fa-twitter:hover {
+}
+
+.fa-twitter:hover {
     color: #55ACEE;
-  }
+}
 
-  .fa-instagram:hover {
+.fa-instagram:hover {
     color: palevioletred;
-  }
+}
 
-  .fa-snapchat-ghost:hover {
+.fa-snapchat-ghost:hover {
     color: #fffc00;
-  }
+}
 
-  .fa-tiktok:hover{
+.fa-tiktok:hover {
     background: #000;
     text-shadow: 2px 3px #fe2d52, -1px -3px #55acee;
-  }
-  .contact{
+}
+
+.contact {
     font-size: 15px;
-  }
+}
 
 @media(max-width:700px) {
     nav .mainMenu {
@@ -174,8 +174,8 @@ h1 {
         position: absolute;
         display: flex;
         left: -20px;
-        top: -15px;
-        height: 160px;
+        top: -22px;
+        height: 130px;
         width: auto;
         margin-bottom: 25px;
     }
