@@ -1,11 +1,16 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     font-family: 'Bookman, URW Bookman L, serif';
+}
+
+.content{
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap{
+    position: static;
+    padding-bottom: 15rem;
 }
 
 nav {
@@ -21,6 +26,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 nav .mainMenu {
@@ -29,7 +35,6 @@ nav .mainMenu {
 }
 
 nav .mainMenu li a {
-
     display: inline-block;
     padding: 15px;
     font-size: 1.5rem;
@@ -57,18 +62,6 @@ nav .mainMenu .closeMenu,
     cursor: pointer;
 }
 
-.fa-facebook:hover {
-    color: rgb(70, 120, 219);
-}
-
-.fa-instagram:hover {
-    color: rgb(150, 81, 223);
-}
-
-.fa-twitter:hover {
-    color: rgb(118, 158, 237)
-}
-
 nav .logo {
     margin: 6px;
     font-size: 25px;
@@ -90,6 +83,55 @@ h1 {
     text-align: center;
     font-family: 'Bookman, URW Bookman L, serif';
 }
+
+.footer{
+    height: 12rem;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 97%;
+    text-align:center;
+    padding-top: 1.5em;
+    line-height: 1.5;
+    border: black solid 5px;
+    bottom: 0;
+    color: white;
+    z-index: 1;
+}
+
+.fab{
+    margin-top: 5%;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em;
+    display: inline-block;
+    font-size: 35px;
+  }
+
+.fa-facebook:hover {
+    color: rgb(70, 120, 219);
+  }
+ 
+  .fa-twitter:hover {
+    color: #55ACEE;
+  }
+
+  .fa-instagram:hover {
+    color: palevioletred;
+  }
+
+  .fa-snapchat-ghost:hover {
+    color: #fffc00;
+  }
+
+  .fa-tiktok:hover{
+    background: #000;
+    text-shadow: 2px 3px #fe2d52, -1px -3px #55acee;
+  }
+  .contact{
+    font-size: 15px;
+  }
 
 @media(max-width:700px) {
     nav .mainMenu {

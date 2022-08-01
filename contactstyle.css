@@ -1,20 +1,23 @@
 
 /*  */
 body, html {
-height: 100%;
-background-color: #000;
+    height: 100%;
+    background-color: #000;
+    font-family: 'Bookman, URW Bookman L, serif';
 }
 
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 hr{
-    width: 70%;
+    width: 100%;
 }
 
 .bg-image {
-    background-image: url("images/coffeefriends.jpeg");
+    background-image: url("./images/coffeefriends.jpeg");
     filter: blur(4px);
     width: 100%;
     background-repeat: no-repeat;
@@ -33,11 +36,12 @@ hr{
     top: 97%;
     text-align:center;
     padding-top: 1.5em;
-    line-height: 0.5;
+    line-height: 1.5;
     border: black solid 5px;
 }
 
 .fab{
+    margin-top: 5%;
     text-align: center;
     text-decoration: none;
     margin: 0.5em;
@@ -71,6 +75,72 @@ hr{
     font-size: 15px;
   }
 
+/*  */
+nav {
+    background: #6a8737;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid #333;
+}
+
+.topScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+
+    display: inline-block;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav .mainMenu li a:hover {
+    background: rgb(186, 135, 89);
+    color: black;
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu,
+.icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+nav .logo img {
+    position: absolute;
+    display: flex;
+    left: -20px;
+    top: -45px;
+    height: 250px;
+    width: auto;
+    margin-bottom: 25px;
+}
 
 @media only screen and (max-width: 700px){
     
@@ -88,7 +158,7 @@ hr{
         font-size: 30px;
         align-items: center;
         border-radius: 7px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .name{
@@ -143,6 +213,52 @@ hr{
         border: black solid 3px;
         height: 11%; 
     }
+
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #6a8737;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        color: black;
+        font-size: 1.6rem;
+    }
+
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+
+    nav .logo img {
+        position: absolute;
+        display: flex;
+        left: -20px;
+        top: -15px;
+        height: 160px;
+        width: auto;
+        margin-bottom: 25px;
+    }
     
 }
 
@@ -151,12 +267,12 @@ hr{
     #formcontainer{
         color: black;
         position: absolute;
-        top: 53%;
+        top: 50%;
         left: 50%;
         padding: 10px;
         transform:translate(-50%,-50%);
-        width: 690px;
-        height: 690px;
+        width: 80%;
+        height: 83%;
         box-sizing: border-box;
         background-color: rgba(255,255,255, 0.6);
         font-size: 30px;
@@ -236,7 +352,7 @@ hr{
     #sideimage{
         grid-row: 1 / 6;
         grid-column: 1 / 2;
-        background-image: url("images/coffee-2.jpeg");
+        background-image: url("./images/coffee-2.jpeg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50%;
