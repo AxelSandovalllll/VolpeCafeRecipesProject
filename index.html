@@ -5,30 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volpe Cafe NavBar</title>
-    <link rel="stylesheet" href="recipes.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 
+<div id="recipe-grid">
+
+</div>
+
 <body>
-    <nav>
-        <div class="logo">
-            <h1>Volpe Cafe</h1>
-        </div>
-        <div class="openMenu"><i class="fa fa-bars"></i></div>
-        <ul class="mainMenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <div class="closeMenu"><i class="fa fa-times"></i></div>
-            <span class="icons">
-                <i class="fab fa-facebook"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fab fa-twitter"></i>
-            </span>
-        </ul>
-    </nav>
+    <div class="topScreen">
+        <nav>
+            <div class="logo">
+                <a href="index.html"> <img src="./images/LOGO.png" alt="Volpe Cafe"></a>
+            </div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="#">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <span class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </span>
+            </ul>
+        </nav>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+    <main class="page">
+        <header class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Volpe Cafe </h1>
+                    <br>
+
+                    <h4>Tonight is the Night</h4>
+                </div>
+            </div>
+        </header>
+        <!-- recipes container -->
+        <section class="recipes-container">
+            <!-- Volpe Favorites -->
+            <div class="favorites-container">
+                <h2>~Volpe Favorites~</h2>
+                <br>
+
+                <i class="fa fa-star"></i>
+                <br>
+                <i class="fa fa-star"></i>
+                <br>
+
+                <i class="fa fa-star"></i>
+                <br>
+
+                <div class="reviewFav-link">
+                    <a href=".leaveRating#####">
+                        <div class="p">
+                            <p>Rate your favorite recipe, too!
+                                !Click Here!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- favorite list -->
+            <div class="favorites-list">
+
+                <!-- single recipe  -->
+                <a href="single.recipe.html#####" class="recipe">
+                    <img src="https://www.simplyrecipes.com/thmb/kIO5eBT7EQrQTqbU2VJwuK-3fPQ=/1229x1229/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2010__10__quick-mac-cheese-horiz-a-1800-2086266fbc1b48a28a575b793d2926fd.jpg"
+                        alt="img of recipe" class="img recipe-img" />
+                    <h3>Pasta</h3>
+                    <p>Prep:15 min | cook: 10min | rating: 4/5</p>
+                </a> <a href="single.recipe.html#####" class="recipe">
+                    <img src=".//images/coffeefriends.jpeg" alt="img of recipe" class="img recipe-img" />
+                    <h3>Mac & Cheese</h3>
+                    <p>Prep:10 min | cook: 10min | rating: 5/5</p>
+                </a> <a href="single.recipe.html#####" class="recipe">
+                    <img src="https://post.healthline.com/wp-content/uploads/2020/09/healthy-eating-ingredients-732x549-thumbnail.jpg"
+                        alt="img of recipe" class="img recipe-img" />
+                    <h3>Boss Burger</h3>
+                    <p>Prep:20 min | cook: 30min | rating: 4/5</p>
+                </a> <a href="single.recipe.html#####" class="recipe">
+                    <img src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg"
+                        alt="img of recipe" class="img recipe-img" />
+                    <h3>Cotton Candy</h3>
+                    <p>Prep:15 min | cook: 100min | rating: 5/5</p>
+                </a>
+            </div>
+
+        </section>
+    </main>
 
 </body>
 <script src="app.js"></script>
