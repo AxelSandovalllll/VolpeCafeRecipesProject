@@ -9,7 +9,7 @@ body {
 }
 
 .content-wrap{
-    position: static;
+    position: relative;
     padding-bottom: 15rem;
 }
 
