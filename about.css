@@ -71,6 +71,9 @@ body {
 
 .about-item:hover {
     background-color: #6a8737;
+    border: 5px;
+    /* border-style: solid;
+    border: color #333; */
 }
 
 
