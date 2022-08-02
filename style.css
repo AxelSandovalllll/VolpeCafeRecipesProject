@@ -87,7 +87,7 @@ h1 {
 .footer{
     height: 12rem;
     background-color: #000;
-    position: absolute;
+    position:absolute;
     left: 0;
     width: 100%;
     top: 97%;

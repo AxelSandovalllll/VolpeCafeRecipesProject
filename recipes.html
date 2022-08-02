@@ -37,21 +37,25 @@
             <div class="recipe-links">
                 <h2> Explore: </h2>
                 <ul>
-                    <li class="list-action" onclick="getRecipesBy('pasta')"> Desserts </li>
-                    <li class="list-action" onclick="getRecipesBy('latte')"> Lattes </li>
-                    <li class="list-action" onclick="getRecipesBy('mocha')"> Refreshers </li> 
+                    <li class="list-action" onclick="getRecipesBy('coffee')"> Desserts </li>
+                    <li class="list-action" onclick="getRecipesBy('dessert')"> Lattes </li>
+                    <li class="list-action" onclick="getRecipesBy('drink')"> Refreshers </li>
+                    <li class="list-action" onclick="getRecipesBy('Breakfast')"> Breakfast </li> 
                 </ul>
                 
             </div>
-
+            <form>
             <div class="dropdown-menu">
-                <select name="Explore">
-                    <option value="Populer" onclick="getRecipesBy('coffee')"> Popular </option>
-                    <option value="Desserts" onclick="getRecipesBy('pasta')"> Desserts </option>
-                    <option value="Lattes" onclick="getRecipesBy('latte')"> Lattes </option>
-                    <option value="Refreshers" onclick="getRecipesBy('mocha')"> Refreshers </option> 
+                <select name="Explore" id="plate">
+                   <option value='pasta'> Lunch </option>
+                    <option value='dessert'> Desserts </option>
+                    <option value='latte'> Lattes </option>
+                    <option value='drink'> Refreshers </option>
+                    <option value='breakfast'> Breakfast </option>
                 </select>
             </div>
+            <button id="explore" type="button" onclick="getRecipesBy()">Explore</button>
+            </form>
             
             <!-- List of Recipes -->
             <div id="recipe-grid">

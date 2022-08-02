@@ -56,12 +56,20 @@
 } 
 
 .rating__star {
-    font-size: 1.3em;
-    cursor: pointer;
-    color: #dabd18b2;
-    transition: filter linear .3s;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #dabd18b2;
+  transition: filter linear .3s;
 }
 
+.rating__star:hover {
+  filter: drop-shadow(1px 1px 4px gold);
+}
+
+.fas_fa-star{
+  color: black;
+  font-size: 2.4em;
+}
 #loader {
     border: 16px solid white;
     border-radius: 50%;
@@ -100,6 +108,7 @@
     left: 60%;
     transform: translate(-50%);
     width: 85%;
+    padding-bottom: 15rem;
     }
 
     .recipe-links{
@@ -137,10 +146,23 @@
         grid-template-columns: repeat(auto-fit, minmax(275px,300px));
         left: 50%;
         transform: translate(-50%);
+        row-gap: 1.25em;
+        width: 300px;
+        padding-bottom: 7.5rem;
     }
 
     .recipe-links{
         display: none;
+    }
+
+    #explore{
+      position: absolute;
+      top: 6.54rem;
+      left: 70%;
+      height: 25px;
+      width: 90px;
+      border: black solid 1px;
+      border-radius: 5px;
     }
 
     .dropdown-menu{
@@ -154,7 +176,7 @@
         width: 50%;
         font-size: 20px;
         text-align: center;
-        left: 50%;
+        left: 40%;
         transform: translate(-50%);
     }
     

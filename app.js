@@ -1,5 +1,5 @@
 
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query=coffee&addRecipeInformation=true')
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=7cf9062184834f7caf2db21cbfee050a&number=10&query=coffee&addRecipeInformation=true')
     .then((beans) => beans.json())
     .then((beans) => {
         console.log(beans);
@@ -7,7 +7,7 @@
         loader.style.display = 'none';
         beans['results'].forEach(element => {
             var item = (`
-                <div class=card>
+                <div class=card ${element['id']}>
                     <div class=tumb>
                         <img src=${element['image']}></img>
                     </div>
@@ -47,34 +47,36 @@ function close() {
     mainMenu.style.top = '-100%';
 }
 
-const ratingStars = [...document.getElementsByClassName("rating__star")];
+// creates the rating object of starts 
+const ratingStars = document.getElementsByClassName("rating__star");
 
 function executeRating(stars) {
-  const starClassActive = "rating__star fas fa-star";
-  const starClassInactive = "rating__star far fa-star";
-  const starsLength = stars.length;
-  let i;
-  stars.map((star) => {
-    star.onclick = () => {
-      i = stars.indexOf(star);
-
-      if (star.className.indexOf(starClassInactive) !== -1) {
-        for (i; i >= 0; --i) stars[i].className = starClassActive;
-      } else {
-        for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
-      }
-    };
-  });
-}
+    const starClassActive = "rating__star fas fa-star"; //star filled
+    const starClassUnactive = "rating__star far fa-star"; //star hollow
+    const starsLength = stars.length;
+    let i;
+    stars.map((star) => {
+       star.onclick = () => {
+          i = stars.indexOf(star);
+ 
+          if (star.className===starClassInactive){
+             for (i; i >= 0; --i) stars[i].className = starClassActive; //changes start to filled
+          } else {
+             for (i; i < starsLength; ++i) stars[i].className = starClassUnactive; //changes star to hollow
+          }
+       };
+    });
+ }
 
 executeRating(ratingStars);
 
 
-function getRecipesBy(query){
+function getRecipesBy(){
+    var query = document.getElementById('plate').value;
     var loader = document.getElementById('loader');
     document.getElementById('recipe-grid').innerHTML = '';
     loader.style.display = '';
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query='+query+'&addRecipeInformation=true')
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=7cf9062184834f7caf2db21cbfee050a&number=10&query='+query+'&addRecipeInformation=true')
     .then((beans) => beans.json())
     .then((beans) => {
         console.log(beans);
