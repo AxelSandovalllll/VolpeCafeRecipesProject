@@ -1,4 +1,68 @@
 
+body {
+  font-family: 'Bookman, URW Bookman L, serif';
+}
+
+.content{
+  position: relative;
+  min-height: 100vh;
+  background-color: rgb(222,222,222);
+}
+
+.content-wrap{
+  position: relative;
+  padding-bottom: 15rem;
+}
+
+.footer{
+  height: 12rem;
+  background-color: #000;
+  position:absolute;
+  left: 0;
+  width: 100%;
+  top: 97%;
+  text-align:center;
+  padding-top: 1.5em;
+  line-height: 1.5;
+  border: black solid 5px;
+  bottom: 0;
+  color: white;
+  z-index: 1;
+}
+
+.fab{
+  margin-top: 5%;
+  text-align: center;
+  text-decoration: none;
+  margin: 0.5em;
+  display: inline-block;
+  font-size: 35px;
+}
+
+.fa-facebook:hover {
+  color: rgb(70, 120, 219);
+}
+
+.fa-twitter:hover {
+  color: #55ACEE;
+}
+
+.fa-instagram:hover {
+  color: palevioletred;
+}
+
+.fa-snapchat-ghost:hover {
+  color: #fffc00;
+}
+
+.fa-tiktok:hover{
+  background: #000;
+  text-shadow: 2px 3px #fe2d52, -1px -3px #55acee;
+}
+.contact{
+  font-size: 15px;
+}
+
 .card {
     position: relative;
     width: 300px;
@@ -22,6 +86,13 @@
     text-align: center;;
 }
 
+.details a{
+  color: black;
+}
+
+.details a:hover{
+  color: #48392A; 
+}
 
 .tumb{
     align-items: center;
@@ -103,8 +174,8 @@
     position:relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(275px,300px));
-    column-gap: 5%;
-    row-gap: 5%;
+    column-gap: 2.5em;
+    row-gap: 1em;
     left: 60%;
     transform: translate(-50%);
     width: 85%;
@@ -122,6 +193,7 @@
     height: 100%;
     line-height: 1.25;
     border-right: 2px black solid;
+    background-color: rgb(222,222,222);
   }
 
   .recipe-links ul,li{

@@ -1,18 +1,4 @@
 
-body {
-    font-family: 'Bookman, URW Bookman L, serif';
-}
-
-.content{
-    position: relative;
-    min-height: 100vh;
-}
-
-.content-wrap{
-    position: relative;
-    padding-bottom: 15rem;
-}
-
 nav {
     background: #6a8737;
     color: white;

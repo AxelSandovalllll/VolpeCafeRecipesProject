@@ -12,7 +12,7 @@
                         <img src=${element['image']}></img>
                     </div>
                     <div class=details>
-                        <h4>${element['title']}</h4>
+                        <h4><a href=${element['sourceUrl']}>${element['title']}</a></h4>
                         <div class=recipe-details>
                             <p> Servings: ${element['servings']}  </p>
                             <p> Time: ${element['readyInMinutes']} Minutes </p>
@@ -89,7 +89,42 @@ function getRecipesBy(){
                         <img src=${element['image']}></img>
                     </div>
                     <div class=details>
-                        <h4>${element['title']}</h4>
+                        <h4><a href=${element['sourceUrl']}>${element['title']}</a></h4>
+                        <div class=recipe-details>
+                            <p> Servings: ${element['servings']}  </p>
+                            <p> Time: ${element['readyInMinutes']} Minutes </p>
+                            <div class=rating>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                                <i class="rating__star far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>      
+                </div> `)
+            document.getElementById('recipe-grid').innerHTML += item;  
+        });
+    });
+}
+
+function getRecipesByName(query){
+    document.getElementById('recipe-grid').innerHTML = '';
+    loader.style.display = '';
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=7cf9062184834f7caf2db21cbfee050a&number=10&query='+query+'&addRecipeInformation=true')
+    .then((beans) => beans.json())
+    .then((beans) => {
+        console.log(beans);
+        var loader = document.getElementById('loader');
+        loader.style.display = 'none';
+        beans['results'].forEach(element => {
+            var item = (`
+                <div class=card>
+                    <div class=tumb>
+                        <img src=${element['image']}></img>
+                    </div>
+                    <div class=details>
+                        <h4><a href=${element['sourceUrl']}>${element['title']}</a></h4>
                         <div class=recipe-details>
                             <p> Servings: ${element['servings']}  </p>
                             <p> Time: ${element['readyInMinutes']} Minutes </p>
