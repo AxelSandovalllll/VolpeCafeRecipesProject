@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Bookman, URW Bookman L, serif';
 }
@@ -11,6 +12,7 @@ body {
     position: relative;
     padding-bottom: 15rem;
 }
+
 
 nav {
     background: #6a8737;
@@ -87,7 +89,7 @@ h1 {
 .footer {
     height: 12rem;
     background-color: #000;
-    position: absolute;
+    position:absolute;
     left: 0;
     width: 100%;
     top: 97%;

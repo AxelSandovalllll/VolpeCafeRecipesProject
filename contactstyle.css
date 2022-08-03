@@ -76,8 +76,9 @@ hr {
     font-size: 15px;
 }
 
-/*  */
-/* nav {
+ 
+nav {
+
     background: #6a8737;
     color: white;
     display: flex;
@@ -136,9 +137,9 @@ nav .logo {
 nav .logo img {
     position: absolute;
     display: flex;
-    left: -20px;
-    top: -45px;
-    height: 250px;
+    left: 0px;
+    top: -20px;
+    height: 100px;
     width: auto;
     margin-bottom: 25px;
 } */
@@ -255,8 +256,8 @@ nav .logo img {
         position: absolute;
         display: flex;
         left: -20px;
-        top: -15px;
-        height: 160px;
+        top: -25px;
+        height: 140px;
         width: auto;
         margin-bottom: 25px;
     }
