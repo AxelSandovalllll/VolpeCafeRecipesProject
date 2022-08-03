@@ -54,7 +54,7 @@ main {
     }
 
     .hero {
-        height: auto;
+        height: 35vh;
         width: 100%;
         background: url('/images/coffeefriends.jpeg') center/cover no-repeat;
         margin-bottom: 2rem;
@@ -88,8 +88,8 @@ main {
 }
 
 .favorites-container i {
-    color: #edcd40;
-    text-shadow: 0 0 2px #000;
+    color: black;
+    text-shadow: 0 0 15px gold;
     margin-bottom: -10px;
 }
 
@@ -104,21 +104,19 @@ main {
 .favorites-container h2 {
     margin-bottom: .5rem;
     font-weight: 50;
-    text-shadow: 0 0px 4px olive;
+    text-shadow: 0 0 15px silver;
     color: #333;
 }
 
 .favorites-container p {
     color: #333;
     display: inline-block;
-    text-shadow: 0 0 1px olive;
-
-    /* text-decoration: dotted; */
+    text-shadow: 0 0 15px #ffc40c;
 }
 
 .favorites-container p:hover {
-    color: rgb(red, rgb(161, 113, 41), blue);
-    text-shadow: 0px 0 8px #000;
+    color: white;
+    text-shadow: 0px 0 15px #000;
     transform: translateY(-5px);
     transition: all 400ms ease-in-out;
 }
@@ -263,14 +261,14 @@ main {
 
 }
 
-.footer {
+/* .footer {
     margin-bottom: -10px;
     margin-left: -5px;
-    /* margin: 0px; */
+
     padding: 0px;
     min-width: 100%;
     max-width: 100%;
     border: black solid 15px;
     ;
 
-}
+} */

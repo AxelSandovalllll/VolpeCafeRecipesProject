@@ -65,7 +65,7 @@ body {
 }
 
 .about-item:hover {
-    background-color: #6a8737;
+    background-color: black;
     border: 5px;
     /* border-style: solid;
     border: color #333; */
@@ -73,10 +73,11 @@ body {
 
 
 
-.about-item:hover h3 {
-    color: black;
+.about-item:hover h3,
+.about-item:hover p {
+    color: white;
     width: 100%;
-    box-shadow: 0 0 9px black;
+    /* box-shadow: 0 0 9px black; */
 }
 
 .about-item:hover hr {
@@ -84,6 +85,7 @@ body {
 }
 
 .about-item:hover i {
+    color: white;
     transform: translateY(-20px);
 }
 

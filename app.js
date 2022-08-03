@@ -1,5 +1,5 @@
 
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query=coffee&addRecipeInformation=true')
+fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query=coffee&addRecipeInformation=true')
 
     .then((beans) => beans.json())
     .then((beans) => {
@@ -40,11 +40,11 @@ closeMenu.addEventListener('click', close);
 
 function show() {
     mainMenu.style.display = 'flex';
-    mainMenu.style.top = '0';
+    mainMenu.style.top = '-1.5%';
 }
 
 function close() {
-    mainMenu.style.top = '-100%';
+    mainMenu.style.top = '-110%';
 }
 
 const ratingStars = [...document.getElementsByClassName("rating__star")];
@@ -70,18 +70,18 @@ function executeRating(stars) {
 executeRating(ratingStars);
 
 
-function getRecipesBy(query){
+function getRecipesBy(query) {
     var loader = document.getElementById('loader');
     document.getElementById('recipe-grid').innerHTML = '';
     loader.style.display = '';
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query='+query+'&addRecipeInformation=true')
-    .then((beans) => beans.json())
-    .then((beans) => {
-        console.log(beans);
-        var loader = document.getElementById('loader');
-        loader.style.display = 'none';
-        beans['results'].forEach(element => {
-            var item = (`
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=d14b4e290b074f7f90398b5e0a9a46ca&number=10&query=' + query + '&addRecipeInformation=true')
+        .then((beans) => beans.json())
+        .then((beans) => {
+            console.log(beans);
+            var loader = document.getElementById('loader');
+            loader.style.display = 'none';
+            beans['results'].forEach(element => {
+                var item = (`
                 <div class=card>
                     <div class=tumb>
                         <img src=${element['image']}></img>
@@ -101,7 +101,7 @@ function getRecipesBy(query){
                         </div>
                     </div>      
                 </div> `)
-            document.getElementById('recipe-grid').innerHTML += item;  
+                document.getElementById('recipe-grid').innerHTML += item;
+            });
         });
-    });
 }

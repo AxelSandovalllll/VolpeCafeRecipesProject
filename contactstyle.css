@@ -6,11 +6,11 @@ html {
     font-family: 'Bookman, URW Bookman L, serif';
 }
 
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} */
 
 hr {
     width: 100%;
@@ -77,7 +77,7 @@ hr {
 }
 
 /*  */
-nav {
+/* nav {
     background: #6a8737;
     color: white;
     display: flex;
@@ -141,7 +141,7 @@ nav .logo img {
     height: 250px;
     width: auto;
     margin-bottom: 25px;
-}
+} */
 
 @media only screen and (max-width: 700px) {
 
