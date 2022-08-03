@@ -43,11 +43,11 @@ closeMenu.addEventListener('click', close);
 
 function show() {
     mainMenu.style.display = 'flex';
-    mainMenu.style.top = '0';
+    mainMenu.style.top = '-1.5%';
 }
 
 function close() {
-    mainMenu.style.top = '-100%';
+    mainMenu.style.top = '-110%';
 }
 
 // adds clickable events to stars of each recipes on clicks(2)
@@ -111,7 +111,7 @@ function getRecipesBy(){
         });
     });
 }
-
+   
 //handles fetching recipes based on the type clicked 
 function getRecipesByName(query){
     document.getElementById('recipe-grid').innerHTML = '';
@@ -124,6 +124,7 @@ function getRecipesByName(query){
         loader.style.display = 'none';
         beans['results'].forEach(element => {
             var item = (`
+
                 <div class=card>
                     <div class=tumb>
                         <img src=${element['image']}></img>
@@ -144,7 +145,7 @@ function getRecipesByName(query){
                         </div>
                     </div>      
                 </div> `)
-            document.getElementById('recipe-grid').innerHTML += item;  
+                document.getElementById('recipe-grid').innerHTML += item;
+            });
         });
-    });
 }

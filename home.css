@@ -2,6 +2,12 @@ body {
     background-color: rgb(222, 222, 222);
 }
 
+main {
+    /* width: 100%; */
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
 /* img {
     max-width: 100%;
     height: auto;
@@ -13,14 +19,13 @@ body {
     margin-bottom: 2rem;
     border-radius: var(--borderRadius);
     /* position: relative; */
-    margin-top: 45px;
     border: solid #333 4px;
     box-shadow: black 5px 5px 5px 0px;
 }
 
 .hero-container {
     /* position: absolute; */
-    width: 100%;
+    width: auto;
     height: 100%;
     top: 0;
     left: 0;
@@ -42,27 +47,28 @@ body {
     box-shadow: rgb(222, 222, 222) 0px 2px 0;
 }
 
-@media screen and (max-width:764px) {
+@media screen and (max-width:880px) {
     .hero-text h1 {
         font-size: 2rem;
         margin-bottom: 0;
     }
 
     .hero {
-        height: 40vh;
-        width: auto;
+        height: 35vh;
+        width: 100%;
         background: url('/images/coffeefriends.jpeg') center/cover no-repeat;
         margin-bottom: 2rem;
         border-radius: var(--borderRadius);
         /* position: relative; */
-        margin-top: 65px;
+        margin-top: 6px;
+        /* margin-left: -10px; */
     }
 
     .recipes-container {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 4px;
+        margin: auto;
     }
-
 
 }
 
@@ -82,41 +88,42 @@ body {
 }
 
 .favorites-container i {
-    color: #edcd40;
-    text-shadow: 0 0 2px #000;
+    color: black;
+    text-shadow: 0 0 15px gold;
+    margin-bottom: -10px;
 }
+
 
 .favorites-list {
     display: grid;
     gap: 2rem 1rem;
     padding: 3rem;
+
 }
 
 .favorites-container h2 {
     margin-bottom: .5rem;
     font-weight: 50;
-    text-shadow: 0 0px 4px olive;
+    text-shadow: 0 0 15px silver;
     color: #333;
 }
 
 .favorites-container p {
     color: #333;
     display: inline-block;
-    text-shadow: 0 0 1px olive;
-
-    /* text-decoration: dotted; */
+    text-shadow: 0 0 15px #ffc40c;
 }
 
 .favorites-container p:hover {
-    color: rgb(red, rgb(161, 113, 41), blue);
-    text-shadow: 0px 0 8px #000;
+    color: white;
+    text-shadow: 0px 0 15px #000;
     transform: translateY(-5px);
     transition: all 400ms ease-in-out;
 }
 
 .favorites-list {
     display: grid;
-    width: fit-content;
+    width: auto;
     grid-template-columns: 1fr;
     margin: auto;
     /* border: forestgreen solid 2px; */
@@ -160,7 +167,7 @@ body {
     letter-spacing: 3.5px;
 }
 
-@media screen and (min-width:765px) and (max-width:1050px) {
+@media screen and (min-width:881px) and (max-width:1050px) {
     .favorites-list {
         grid-template-columns: 1fr 1fr;
         display: grid;
@@ -216,7 +223,7 @@ body {
     .favorites-list {
         grid-template-columns: 1fr 1fr 1fr;
         display: grid;
-        gap: 3rem 3rem;
+        gap: 3rem 5rem;
         padding: 3rem;
     }
 
@@ -238,15 +245,30 @@ body {
         order: 0;
         margin-top: 70px;
         text-align: center;
-        margin-left: 15%;
-        width: 100%;
-        margin-bottom: 555px;
+        margin-left: 3%;
+        width: auto;
+
+        /* margin-bottom: 400px; */
         margin-top: 50px;
         padding-right: 10%;
         padding-left: 10%;
         padding-top: 20px;
-        border: black solid 5px;
+        border: #333 5px;
+        border-style: dotted;
+        border-bottom: none;
     }
 
 
 }
+
+/* .footer {
+    margin-bottom: -10px;
+    margin-left: -5px;
+
+    padding: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    border: black solid 15px;
+    ;
+
+} */
