@@ -1,4 +1,4 @@
-
+    //first fetch for recipes page
     fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=61bba8c3712641a384c5d6d4e1665cc2&number=10&query=coffee&addRecipeInformation=true')
     .then((beans) => beans.json())
     .then((beans) => {
@@ -30,7 +30,8 @@
             document.getElementById('recipe-grid').innerHTML += item;  
         });
     });
-    
+
+ // handles the actions of the header(nav bar)   
 const mainMenu = document.querySelector('.mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
@@ -48,7 +49,7 @@ function close() {
     mainMenu.style.top = '-100%';
 }
 
-// creates the rating object of starts 
+// adds clickable events to stars of each recipes on clicks(2)
 function activateStars(id){
     const ratingStars = [...document.getElementsByClassName("rating__star__"+id)];
     executeRating(ratingStars,id);
@@ -62,7 +63,6 @@ function executeRating(stars,id) {
    stars.map((star) => {
       star.onclick = () => {
          i = stars.indexOf(star);
-
          if (star.className.indexOf(starClassUnactive) !== -1) {
             for (i; i >= 0; --i) stars[i].className = starClassActive;
          } else {
@@ -72,6 +72,7 @@ function executeRating(stars,id) {
    });
 }
 
+// handles fetching recipes based dropdown value 
 function getRecipesBy(){
     var query = document.getElementById('plate').value;
     var loader = document.getElementById('loader');
@@ -94,12 +95,13 @@ function getRecipesBy(){
                         <div class=recipe-details>
                             <p> Servings: ${element['servings']}  </p>
                             <p> Time: ${element['readyInMinutes']} Minutes </p>
-                            <div class=rating>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
+                            <div class="rating" onclick="activateStars('${element['id']}')">
+                                <span class="rating__result__${element['id']}"></span> 
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
                             </div>
                         </div>
                     </div>      
@@ -109,6 +111,7 @@ function getRecipesBy(){
     });
 }
 
+//handles fetching recipes based on the type clicked 
 function getRecipesByName(query){
     document.getElementById('recipe-grid').innerHTML = '';
     loader.style.display = '';
@@ -129,12 +132,13 @@ function getRecipesByName(query){
                         <div class=recipe-details>
                             <p> Servings: ${element['servings']}  </p>
                             <p> Time: ${element['readyInMinutes']} Minutes </p>
-                            <div class=rating>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
+                            <div class="rating" onclick="activateStars('${element['id']}')">
+                                <span class="rating__result__${element['id']}"></span> 
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
                             </div>
                         </div>
                     </div>      
