@@ -126,7 +126,7 @@ body {
     font-size: 17px;
 } 
 
-.rating__star {
+/* .rating__star {
   font-size: 1.3em;
   cursor: pointer;
   color: #dabd18b2;
@@ -140,7 +140,7 @@ body {
 .fas_fa-star{
   color: black;
   font-size: 2.4em;
-}
+} */
 #loader {
     border: 16px solid white;
     border-radius: 50%;

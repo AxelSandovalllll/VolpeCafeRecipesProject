@@ -1,5 +1,5 @@
 
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=7cf9062184834f7caf2db21cbfee050a&number=10&query=coffee&addRecipeInformation=true')
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=61bba8c3712641a384c5d6d4e1665cc2&number=10&query=coffee&addRecipeInformation=true')
     .then((beans) => beans.json())
     .then((beans) => {
         console.log(beans);
@@ -7,7 +7,7 @@
         loader.style.display = 'none';
         beans['results'].forEach(element => {
             var item = (`
-                <div class=card ${element['id']}>
+                <div class=card>
                     <div class=tumb>
                         <img src=${element['image']}></img>
                     </div>
@@ -16,12 +16,13 @@
                         <div class=recipe-details>
                             <p> Servings: ${element['servings']}  </p>
                             <p> Time: ${element['readyInMinutes']} Minutes </p>
-                            <div class=rating>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
-                                <i class="rating__star far fa-star"></i>
+                            <div class="rating" onclick="activateStars('${element['id']}')">
+                                <span class="rating__result__${element['id']}"></span> 
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
+                                <i class="rating__star__${element['id']} far fa-star"></i>
                             </div>
                         </div>
                     </div>      
@@ -48,28 +49,28 @@ function close() {
 }
 
 // creates the rating object of starts 
-const ratingStars = document.getElementsByClassName("rating__star");
+function activateStars(id){
+    const ratingStars = [...document.getElementsByClassName("rating__star__"+id)];
+    executeRating(ratingStars,id);
+}
 
-function executeRating(stars) {
-    const starClassActive = "rating__star fas fa-star"; //star filled
-    const starClassUnactive = "rating__star far fa-star"; //star hollow
-    const starsLength = stars.length;
-    let i;
-    stars.map((star) => {
-       star.onclick = () => {
-          i = stars.indexOf(star);
- 
-          if (star.className===starClassInactive){
-             for (i; i >= 0; --i) stars[i].className = starClassActive; //changes start to filled
-          } else {
-             for (i; i < starsLength; ++i) stars[i].className = starClassUnactive; //changes star to hollow
-          }
-       };
-    });
- }
+function executeRating(stars,id) {
+   const starClassActive = "rating__star__"+id+" fas fa-star";
+   const starClassUnactive = "rating__star__"+id+" far fa-star";
+   const starsLength = stars.length;
+   let i;
+   stars.map((star) => {
+      star.onclick = () => {
+         i = stars.indexOf(star);
 
-executeRating(ratingStars);
-
+         if (star.className.indexOf(starClassUnactive) !== -1) {
+            for (i; i >= 0; --i) stars[i].className = starClassActive;
+         } else {
+            for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
+         }
+      };
+   });
+}
 
 function getRecipesBy(){
     var query = document.getElementById('plate').value;
