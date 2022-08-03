@@ -1,3 +1,4 @@
+
     //first fetch for recipes page
     fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=61bba8c3712641a384c5d6d4e1665cc2&number=10&query=coffee&addRecipeInformation=true')
     .then((beans) => beans.json())
@@ -27,11 +28,11 @@
                         </div>
                     </div>      
                 </div> `)
-            document.getElementById('recipe-grid').innerHTML += item;  
+            document.getElementById('recipe-grid').innerHTML += item;
         });
     });
-
- // handles the actions of the header(nav bar)   
+    
+// handles the actions of the header(nav bar)   
 const mainMenu = document.querySelector('.mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
